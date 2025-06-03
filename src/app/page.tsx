@@ -2,6 +2,7 @@ import Navbar from '../app/components/Navbar'
 import Hero from '../app/components/Hero'
 import Introductions from './components/Introdution'
 import MyVision from './components/Vision'
+import Mission from './components/Mission'
 
 export default function Home() {
   return (
@@ -10,6 +11,8 @@ export default function Home() {
       <Hero />
       <Introductions/>
       <MyVision />
+      <Mission />
+
       
     </>
   )

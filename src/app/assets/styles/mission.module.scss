@@ -1,0 +1,555 @@
+// assets/styles/mission.module.scss
+
+.missionContainer {
+    min-height: 100vh;
+    background: #1a1f2a;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .backgroundElements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .bgCircle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(74, 144, 226, 0.1);
+    animation: float 6s ease-in-out infinite;
+    
+    &.circle1 {
+      width: 300px;
+      height: 300px;
+      top: -150px;
+      right: -150px;
+      animation-delay: 0s;
+    }
+    
+    &.circle2 {
+      width: 200px;
+      height: 200px;
+      bottom: -100px;
+      left: -100px;
+      animation-delay: 2s;
+    }
+    
+    &.circle3 {
+      width: 150px;
+      height: 150px;
+      top: 50%;
+      left: 10%;
+      animation-delay: 4s;
+    }
+  }
+  
+  .gridOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(74, 144, 226, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(74, 144, 226, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  
+  .navbar {
+    position: relative;
+    z-index: 10;
+    padding: 1rem 2rem;
+  }
+  
+  .navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoIcon {
+    color: #4A90E2;
+    padding: 0.5rem;
+    background: rgba(74, 144, 226, 0.1);
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(74, 144, 226, 0.2);
+  }
+  
+  .navActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .badge {
+    background: rgba(74, 144, 226, 0.2);
+    color: #4A90E2;
+    padding: 0.75rem;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(74, 144, 226, 0.3);
+    animation: pulse 3s ease-in-out infinite;
+  }
+  
+  .star {
+    font-size: 1.2rem;
+  }
+  
+  .timeWidget {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .timeLabel, .skillBadge {
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .skillBadge {
+    background: #4A90E2;
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .clock {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .clockFace {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #4A90E2;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .clockHand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 8px;
+    background: #4A90E2;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(45deg);
+    animation: rotate 4s linear infinite;
+  }
+  
+  .contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .leftContent {
+    color: white;
+  }
+  
+  .header {
+    margin-bottom: 3rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  
+  .titleUnderline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #4A90E2, #357ABD);
+    margin-top: 1rem;
+    border-radius: 2px;
+  }
+  
+  .missionContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .missionItem {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+  
+  .missionIcon {
+    width: 4px;
+    height: 100%;
+    background: #4A90E2;
+    border-radius: 2px;
+    flex-shrink: 0;
+    min-height: 60px;
+  }
+  
+  .iconBar {
+    width: 100%;
+    height: 100%;
+    background: #4A90E2;
+    border-radius: 2px;
+  }
+  
+  .missionText p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+  }
+  
+  .rightContent {
+    display: flex;
+    align-items: center;
+  }
+  
+  .imageGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .imageCard {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 16px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      border-color: rgba(74, 144, 226, 0.3);
+    }
+    
+    &.largeCard {
+      grid-column: span 2;
+    }
+    
+    &.squareCard {
+      grid-row: span 2;
+    }
+  }
+  
+  .svgContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 200px;
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+  }
+  
+  // SVG Animation Classes
+  .floatingPeople {
+    .person1 {
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .person2 {
+      animation: float 3s ease-in-out infinite 1s;
+    }
+    
+    .person3 {
+      animation: float 3s ease-in-out infinite 2s;
+    }
+  }
+  
+  .connectionLines {
+    .pulseLine {
+      animation: pulse 2s ease-in-out infinite;
+    }
+  }
+  
+  .trophy {
+    animation: bounce 2s ease-in-out infinite;
+  }
+  
+  .celebrationStars {
+    .star1 {
+      animation: twinkle 2s ease-in-out infinite;
+    }
+    
+    .star2 {
+      animation: twinkle 2s ease-in-out infinite 0.5s;
+    }
+    
+    .star3 {
+      animation: twinkle 2s ease-in-out infinite 1s;
+    }
+  }
+  
+  .meetingPeople {
+    .attendee1 {
+      animation: subtleMove 4s ease-in-out infinite;
+    }
+    
+    .attendee2 {
+      animation: subtleMove 4s ease-in-out infinite 0.8s;
+    }
+    
+    .attendee3 {
+      animation: subtleMove 4s ease-in-out infinite 1.6s;
+    }
+    
+    .attendee4 {
+      animation: subtleMove 4s ease-in-out infinite 2.4s;
+    }
+    
+    .attendee5 {
+      animation: subtleMove 4s ease-in-out infinite 3.2s;
+    }
+  }
+  
+  .chartBars {
+    .bar1 {
+      animation: barGrow 3s ease-in-out infinite;
+    }
+    
+    .bar2 {
+      animation: barGrow 3s ease-in-out infinite 0.5s;
+    }
+    
+    .bar3 {
+      animation: barGrow 3s ease-in-out infinite 1s;
+    }
+    
+    .bar4 {
+      animation: barGrow 3s ease-in-out infinite 1.5s;
+    }
+  }
+  
+  .professionalFigure {
+    .head {
+      animation: gentleNod 4s ease-in-out infinite;
+    }
+    
+    .briefcase {
+      animation: subtleSway 3s ease-in-out infinite;
+    }
+  }
+  
+  .achievementIcons {
+    .medal1 {
+      animation: medalShine 2s ease-in-out infinite;
+    }
+    
+    .medal2 {
+      animation: medalShine 2s ease-in-out infinite 1s;
+    }
+  }
+  
+  // Keyframe Animations
+  @keyframes float {
+    0%, 100% { 
+      transform: translateY(0px); 
+    }
+    50% { 
+      transform: translateY(-20px); 
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { 
+      opacity: 1; 
+    }
+    50% { 
+      opacity: 0.5; 
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { 
+      transform: translateY(0); 
+    }
+    40% { 
+      transform: translateY(-10px); 
+    }
+    60% { 
+      transform: translateY(-5px); 
+    }
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { 
+      opacity: 0.7; 
+      transform: scale(1); 
+    }
+    50% { 
+      opacity: 1; 
+      transform: scale(1.2); 
+    }
+  }
+  
+  @keyframes subtleMove {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg); 
+    }
+    50% { 
+      transform: translateY(-3px) rotate(1deg); 
+    }
+  }
+  
+  @keyframes barGrow {
+    0%, 100% { 
+      transform: scaleY(1); 
+    }
+    50% { 
+      transform: scaleY(1.2); 
+    }
+  }
+  
+  @keyframes gentleNod {
+    0%, 100% { 
+      transform: translateY(0px); 
+    }
+    50% { 
+      transform: translateY(-2px); 
+    }
+  }
+  
+  @keyframes subtleSway {
+    0%, 100% { 
+      transform: rotate(0deg); 
+    }
+    50% { 
+      transform: rotate(2deg); 
+    }
+  }
+  
+  @keyframes medalShine {
+    0%, 100% { 
+      opacity: 0.8; 
+    }
+    50% { 
+      opacity: 1; 
+      transform: scale(1.1); 
+    }
+  }
+  
+  @keyframes rotate {
+    from { 
+      transform: translate(-50%, -100%) rotate(0deg); 
+    }
+    to { 
+      transform: translate(-50%, -100%) rotate(360deg); 
+    }
+  }
+  
+  // Responsive Design
+  @media (max-width: 1024px) {
+    .contentWrapper {
+      gap: 3rem;
+    }
+    
+    .title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .contentWrapper {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 2rem;
+    }
+    
+    .imageGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .largeCard {
+      grid-column: span 1;
+    }
+    
+    .squareCard {
+      grid-row: span 1;
+    }
+    
+    .navbar {
+      padding: 1rem;
+    }
+    
+    .navContent {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .timeWidget {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .missionItem {
+      gap: 1rem;
+    }
+    
+    .missionText p {
+      font-size: 1rem;
+    }
+    
+    .title {
+      font-size: 1.8rem;
+    }
+    
+    .svgContainer {
+      padding: 0.5rem;
+      min-height: 150px;
+    }
+  }
