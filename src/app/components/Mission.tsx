@@ -227,49 +227,6 @@ const Mission = () => {
               </div>
               <div className={styles.imageOverlay}>Team meeting</div>
             </div>
-
-            {/* Professional Portrait SVG */}
-            <div className={`${styles.imageCard} ${styles.squareCard}`}>
-              <div className={styles.svgContainer}>
-                <svg width="100%" height="300" viewBox="0 0 300 300">
-                  <defs>
-                    <linearGradient id="portrait-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#4A90E2" />
-                      <stop offset="100%" stopColor="#357ABD" />
-                    </linearGradient>
-                    <radialGradient id="face-gradient" cx="50%" cy="50%" r="50%">
-                      <stop offset="0%" stopColor="#357ABD" />
-                      <stop offset="100%" stopColor="#2E5F8A" />
-                    </radialGradient>
-                  </defs>
-                  
-                  <rect width="300" height="300" fill="url(#portrait-bg)" opacity="0.2"/>
-                  
-                  {/* Professional silhouette */}
-                  <g className={styles.professionalFigure}>
-                    <circle cx="150" cy="120" r="40" fill="url(#face-gradient)" className={styles.head}/>
-                    <path d="M110,160 Q150,140 190,160 L190,240 Q150,220 110,240 Z" fill="#4A90E2" className={styles.suit}/>
-                    
-                    {/* Tie */}
-                    <path d="M150,160 L140,180 L150,220 L160,180 Z" fill="#1a1a1a" opacity="0.7"/>
-                    
-                    {/* Briefcase */}
-                    <rect x="200" y="200" width="40" height="30" rx="4" fill="#8B4513" className={styles.briefcase}/>
-                    <rect x="210" y="190" width="20" height="8" rx="2" fill="#654321"/>
-                  </g>
-                  
-                  {/* Achievement icons */}
-                  <g className={styles.achievementIcons}>
-                    <circle cx="80" cy="80" r="15" fill="#FFD700" opacity="0.8" className={styles.medal1}/>
-                    <text x="80" y="85" textAnchor="middle" fill="#1a1a1a" fontSize="12" fontWeight="bold">1</text>
-                    
-                    <circle cx="220" cy="100" r="12" fill="#C0C0C0" opacity="0.8" className={styles.medal2}/>
-                    <text x="220" y="105" textAnchor="middle" fill="#1a1a1a" fontSize="10" fontWeight="bold">★</text>
-                  </g>
-                </svg>
-              </div>
-              <div className={styles.imageOverlay}>Professional portrait</div>
-            </div>
           </div>
         </div>
       </div>
