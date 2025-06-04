@@ -45,7 +45,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: FiInstagram, href: '#', label: 'Instagram', color: '#E4405F' },
-    { icon: FiLinkedin, href: '#', label: 'LinkedIn', color: '#0077B5' },
+    { icon: FiLinkedin, href: 'https://www.linkedin.com/in/nadiah-sianturi', label: 'LinkedIn', color: '#0077B5' },
     { icon: FiGithub, href: '#', label: 'GitHub', color: '#333' },
     { icon: FiTwitter, href: '#', label: 'Twitter', color: '#1DA1F2' }
   ]
@@ -109,15 +109,15 @@ export default function Footer() {
             <div className={styles.contactInfo}>
               <div className={styles.contactItem}>
                 <FiMail className={styles.contactIcon} />
-                <span>nadiah@example.com</span>
+                <span>nadiasianturi11@gmail.com</span>
               </div>
               <div className={styles.contactItem}>
                 <FiPhone className={styles.contactIcon} />
-                <span>+62 123 456 789</span>
+                <span>+628 131 620 1023</span>
               </div>
               <div className={styles.contactItem}>
                 <FiMapPin className={styles.contactIcon} />
-                <span>Jakarta, Indonesia</span>
+                <span>Bekasi, Jakarta</span>
               </div>
             </div>
           </div>

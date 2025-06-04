@@ -21,9 +21,11 @@ const Contact = () => {
               <span>+628 131 620 1023</span>
             </div>
             
-            <div className={styles.contactItem}>
+            <div className={styles.contactItem} style={{ color: 'white' }}>
               <div className={styles.icon}>🌐</div>
-              <span>https://www.linkedin.com/in/nadiah-sianturi/</span>
+              <a href="https://www.linkedin.com/in/nadiah-sianturi/" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>
+                https://www.linkedin.com/in/nadiah-sianturi/
+              </a>
             </div>
             
             <div className={styles.contactItem}>
