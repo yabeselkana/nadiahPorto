@@ -4,7 +4,7 @@ import styles from '../assets/styles/myVision.module.scss'
 
 export default function MyVision() {
   return (
-    <div className={styles.container}>
+    <div id='vision-mission' className={styles.container}>
       <div className={styles.leftSection}>
         <div className={styles.flowchartContainer}>
           <div className={styles.finger}>

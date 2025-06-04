@@ -1,0 +1,603 @@
+// Portfolio.module.scss
+.portfolioContainer {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  // Background Elements (Same as Mission page)
+  .backgroundElements {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .bgCircle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.05));
+    filter: blur(1px);
+    animation: float 8s ease-in-out infinite;
+  
+    &.circle1 {
+      width: 350px;
+      height: 350px;
+      top: 15%;
+      right: 10%;
+      animation-delay: 0s;
+    }
+  
+    &.circle2 {
+      width: 250px;
+      height: 250px;
+      bottom: 15%;
+      left: 5%;
+      animation-delay: 3s;
+    }
+  
+    &.circle3 {
+      width: 180px;
+      height: 180px;
+      top: 60%;
+      right: 30%;
+      animation-delay: 6s;
+    }
+  }
+  
+  .gridOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(rgba(79, 172, 254, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 172, 254, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 25s linear infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-30px) rotate(180deg);
+    }
+  }
+  
+  @keyframes gridMove {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(60px, 60px);
+    }
+  }
+  
+  // Navigation (Same as Mission page)
+  .navbar {
+    position: relative;
+    z-index: 10;
+    padding: 20px 0;
+  }
+  
+  .navContent {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logoIcon {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  
+  .navActions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .badge {
+    background: rgba(79, 172, 254, 0.2);
+    border: 1px solid rgba(79, 172, 254, 0.3);
+    border-radius: 20px;
+    padding: 8px 16px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .star {
+    color: #4facfe;
+    font-size: 18px;
+  }
+  
+  .timeWidget {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 16px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .timeLabel {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+  }
+  
+  .clock {
+    position: relative;
+  }
+  
+  .clockFace {
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(79, 172, 254, 0.5);
+    border-radius: 50%;
+    position: relative;
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1), rgba(0, 242, 254, 0.1));
+  }
+  
+  .clockHand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 12px;
+    background: #4facfe;
+    border-radius: 1px;
+    transform-origin: bottom center;
+    transform: translate(-50%, -100%) rotate(45deg);
+    animation: clockTick 3s linear infinite;
+  }
+  
+  .skillBadge {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  @keyframes clockTick {
+    0% {
+      transform: translate(-50%, -100%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -100%) rotate(360deg);
+    }
+  }
+  
+  // Main Content
+  .contentWrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 5;
+  }
+  
+  // Header
+  .header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #ffffff 0%, #4facfe 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .titleUnderline {
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 2px;
+    margin: 0 auto;
+    animation: underlineGlow 2s ease-in-out infinite alternate;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  @keyframes underlineGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 25px rgba(79, 172, 254, 0.8);
+    }
+  }
+  
+  // Portfolio Navigation
+  .portfolioNav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  
+  .navButton {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 12px 24px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+  
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    &:hover {
+      border-color: rgba(79, 172, 254, 0.3);
+      color: #ffffff;
+      transform: translateY(-2px);
+  
+      &::before {
+        opacity: 1;
+      }
+    }
+  
+    &.active {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      border-color: transparent;
+      color: #ffffff;
+      box-shadow: 0 8px 32px rgba(79, 172, 254, 0.3);
+  
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+  
+  // Portfolio Content
+  .portfolioContent {
+    margin-top: 40px;
+  }
+  
+  .portfolioGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+  }
+  
+  // Portfolio Details
+  .portfolioDetails {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .portfolioCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 32px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      border-color: rgba(79, 172, 254, 0.3);
+      box-shadow: 0 20px 60px rgba(79, 172, 254, 0.1);
+    }
+  }
+  
+  .cardHeader {
+    margin-bottom: 24px;
+  
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 12px;
+    }
+  }
+  
+  .cardMeta {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .metaItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+  
+    svg {
+      color: #4facfe;
+    }
+  }
+  
+  .cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .detailItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .detailLabel {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+  
+  .detailValue {
+    font-size: 1.1rem;
+    color: #4facfe;
+    font-weight: 600;
+  }
+  
+  // Financial Table
+  .financialTable {
+    margin-top: 20px;
+  
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+  }
+  
+  .tableWrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  
+    th {
+      background: rgba(79, 172, 254, 0.1);
+      color: #4facfe;
+      padding: 12px 8px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(79, 172, 254, 0.2);
+    }
+  
+    td {
+      padding: 12px 8px;
+      color: rgba(255, 255, 255, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      
+      &:last-child {
+        border-right: none;
+      }
+    }
+  
+    tr {
+      transition: background-color 0.2s ease;
+  
+      &:hover {
+        background: rgba(79, 172, 254, 0.05);
+      }
+  
+      &:last-child td {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  .institutionCell {
+    font-weight: 600;
+    color: #ffffff !important;
+    min-width: 200px;
+  }
+  
+  .totalCell {
+    font-weight: 600;
+    color: #4facfe !important;
+  }
+  
+  // Achievements List
+  .achievementsList {
+    margin-top: 20px;
+  
+    h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 16px;
+    }
+  }
+  
+  .achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .achievementItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    background: rgba(79, 172, 254, 0.05);
+    border: 1px solid rgba(79, 172, 254, 0.1);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  
+    &:hover {
+      background: rgba(79, 172, 254, 0.1);
+      border-color: rgba(79, 172, 254, 0.3);
+      transform: translateX(5px);
+    }
+  
+    span {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+  }
+  
+  .achievementIcon {
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  
+    svg {
+      color: white;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  
+  // Portfolio Visual
+  .portfolioVisual {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .imageContainer {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.02);
+      border-color: rgba(79, 172, 254, 0.3);
+      box-shadow: 0 25px 80px rgba(79, 172, 254, 0.2);
+  
+      .imageOverlay {
+        background: linear-gradient(135deg, rgba(79, 172, 254, 0.3) 0%, rgba(0, 242, 254, 0.3) 100%);
+      }
+  
+      .portfolioNumber {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  .portfolioImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(10%) brightness(0.9);
+    transition: all 0.3s ease;
+  }
+  
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.4) 0%, rgba(22, 33, 62, 0.4) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+  
+  .overlayContent {
+    text-align: center;
+  }
+  
+  .portfolioNumber {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #ffffff;     
+    margin-bottom: 8px;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    }

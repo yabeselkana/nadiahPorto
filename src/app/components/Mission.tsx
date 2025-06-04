@@ -4,7 +4,7 @@ import styles from '../assets/styles/mission.module.scss';
 
 const Mission = () => {
   return (
-    <div className={styles.missionContainer}>
+    <div id='vision-mission' className={styles.missionContainer}>
       {/* Background Elements */}
       <div className={styles.backgroundElements}>
         <div className={`${styles.bgCircle} ${styles.circle1}`}></div>

@@ -20,7 +20,7 @@ const Introduction: React.FC = () => {
     }, []);
 
     return (
-        <section className={styles.introduction}>
+        <section id='introduction' className={styles.introduction}>
             {/* Animated Background Effects */}
             <div className={styles.backgroundEffects}>
                 {/* Gradient Orbs */}
