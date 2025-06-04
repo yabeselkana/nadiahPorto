@@ -4,7 +4,12 @@ import styles from '../assets/styles/thankYou.module.scss';
 const ThankYou = () => {
   return (
     <div id='thank-you' className={styles.thankYouContainer}>
-      <div className={styles.backgroundOverlay}></div>
+       <div className={styles.backgroundElements}>
+                <div className={`${styles.bgCircle} ${styles.circle1}`}></div>
+                <div className={`${styles.bgCircle} ${styles.circle2}`}></div>
+                <div className={`${styles.bgCircle} ${styles.circle3}`}></div>
+                <div className={styles.gridOverlay}></div>
+            </div>s
       <div className={styles.content}>
         <div className={styles.textSection}>
           <h1 className={styles.title}>Thank You</h1>
@@ -27,9 +32,9 @@ const ThankYou = () => {
         </div>
       </div>
       
-      <div className={styles.bottomDecoration}>
+      {/* <div className={styles.bottomDecoration}>
         <div className={styles.wave}></div>
-      </div>
+      </div> */}
     </div>
   );
 };

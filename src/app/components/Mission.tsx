@@ -5,13 +5,6 @@ import styles from '../assets/styles/mission.module.scss';
 const Mission = () => {
   return (
     <div id='vision-mission' className={styles.missionContainer}>
-      {/* Background Elements */}
-      <div className={styles.backgroundElements}>
-        <div className={`${styles.bgCircle} ${styles.circle1}`}></div>
-        <div className={`${styles.bgCircle} ${styles.circle2}`}></div>
-        <div className={`${styles.bgCircle} ${styles.circle3}`}></div>
-        <div className={styles.gridOverlay}></div>
-      </div>
 
       {/* Navigation */}
       <nav className={styles.navbar}>

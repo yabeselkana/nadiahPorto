@@ -62,8 +62,7 @@ export default function HeroIntroduction() {
         
         <div className={styles.backgroundElements}>
           <div className={styles.gradientOrb1}></div>
-          <div className={styles.gradientOrb2}></div>
-          <div className={styles.gridPattern}></div>
+          <div className={styles.gradientOrb2}></div>s
         </div>
       </section>
 

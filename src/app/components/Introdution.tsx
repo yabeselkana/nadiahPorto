@@ -35,7 +35,7 @@ const Introduction: React.FC = () => {
                 <div className={`${styles.orb} ${styles.orbOrange}`} />
                 
                 {/* Grid Pattern */}
-                <div className={styles.gridPattern} />
+
             </div>
 
             <div className={`${styles.container} ${isVisible ? styles.visible : ''}`}>
