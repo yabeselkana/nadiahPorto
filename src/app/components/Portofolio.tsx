@@ -114,7 +114,7 @@ const Portfolio: React.FC = () => {
             </div>
 
             {/* Navigation */}
-            <nav className={styles.navbar}>
+            {/* <nav className={styles.navbar}>
                 <div className={styles.navContent}>
                     <div className={styles.logo}>
                         <div className={styles.logoIcon}>
@@ -158,7 +158,7 @@ const Portfolio: React.FC = () => {
                         </div>
                     </div>
                 </div>
-            </nav>
+            </nav> */}
 
             {/* Main Content */}
             <div className={styles.contentWrapper}>

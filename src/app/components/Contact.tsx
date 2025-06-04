@@ -4,7 +4,12 @@ import styles from '../assets/styles/contact.module.scss';
 const Contact = () => {
   return (
     <div id='contact' className={styles.contactContainer}>
-      <div className={styles.backgroundPattern}></div>
+         <div className={styles.backgroundElements}>
+        <div className={`${styles.bgCircle} ${styles.circle1}`}></div>
+        <div className={`${styles.bgCircle} ${styles.circle2}`}></div>
+        <div className={`${styles.bgCircle} ${styles.circle3}`}></div>
+        <div className={styles.gridOverlay}></div>
+      </div>
       
       <div className={styles.content}>
         <div className={styles.leftSection}>
