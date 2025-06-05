@@ -24,7 +24,7 @@ export default function HeroIntroduction() {
               <div className={styles.textWrapper}>
                 <h1 className={styles.title}>
                   <span className={styles.titleSpan}>My</span>
-                  <span className={styles.titleMain}>Portfolio</span>
+                  <span className={styles.titleMain}>Portofolio</span>
                 </h1>
                 <div className={styles.decorativeLine}></div>
                 <p className={styles.subtitle}>Management: Organizing for Success</p>

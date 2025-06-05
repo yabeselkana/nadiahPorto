@@ -37,7 +37,7 @@ export default function Footer() {
 
   const menuItems = [
     { name: 'Introduction', href: '#introduction' },
-    { name: 'Portfolio', href: '#portfolio' },
+    { name: 'Portofolio', href: '#portfolio' },
     { name: 'Vision Mission', href: '#vision-mission' },
     { name: 'Contact', href: '#contact' },
     { name: 'Thank You', href: '#thank-you' }

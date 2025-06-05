@@ -35,7 +35,7 @@ const Portfolio: React.FC = () => {
     const portfolioData: PortfolioData[] = [
         {
             id: 1,
-            title: "Portfolio 01",
+            title: "Portofolio 01",
             description: "Assisted Certified Financial Planners (CFPs) in calculating clients' education funds, from kindergarten to university level, by applying current education inflation rates. This helped clients plan more accurately for their long-term financial goals.",
             image: "/api/placeholder/600/400",
             details: {
