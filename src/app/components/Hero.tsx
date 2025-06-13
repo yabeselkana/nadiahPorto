@@ -1,12 +1,12 @@
 import Image from 'next/image'
 import styles from '../assets/styles/hero.module.scss'
-import images from '../assets/image/nadiah.webp'
+import images from '../assets/image/nadiah.jpeg'
 
 export default function HeroIntroduction() {
   return (
     <>
       {/* Hero Section */}
-      <section className={styles.hero}>
+      <section id='/' className={styles.hero}>
         <div className={styles.container}>
           <div className={styles.left}>
             <div className={styles.imageWrapper}>
